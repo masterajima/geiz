@@ -9,3 +9,13 @@ const sequelize = new Sequelize({
   port: "<your_port>",
   dialect: "postgres",
 });
+
+//test
+async function testConnection() {
+  try {
+    await sequelize.authenticate();
+  } catch (error) {
+    console.error("unable to connect to database", error);
+  }
+}
+module.exports = { sequelize, testConnection };
