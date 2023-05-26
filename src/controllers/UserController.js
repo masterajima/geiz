@@ -1,4 +1,8 @@
 const { User } = require("../model/User");
+//hashing
+const bcrypt = require("bcrypt");
+//confirm email
+const jwt = require("jsonwebtoken");
 class UserController {
   async register(req, res) {
     try {
