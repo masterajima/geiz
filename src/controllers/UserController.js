@@ -25,3 +25,4 @@ class UserController {
     }
   }
 }
+module.export = UserController;
